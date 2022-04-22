@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Etch an Sketch Project</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="title"><h1>Etch a Sketch</h1></div>
+    <div class="mode">Mode: drawing</div>
+    <div class="content">
+      <div class="board"></div>
+      <div class="buttons">
+        <button onclick="changeColor('red')" class="redButton">Red</button>
+        <button onclick="changeColor('green')" class="greenButton">Green</button>
+        <button onclick="changeColor('blue')" class="blueButton">Blue</button>
+        <button onclick="changeColor('random')" class="randomButton">Random</button>
+        <button onclick="changeColor('black')" class="blackButton">Black</button>
+        <button onclick="changeColor('gray')" class="grayButton">Gray</button>
+        <button onclick="changeColor('white')" class="erasorButton">Erasor</button>
+        <button onclick="resetBoard()">Reset</button>
+      </div>
+      <div>
+        <input type="text" placeholder="Size of board" value="16" onchange="changeSize(this.value)">
+        <button>Set size</button>
+      </div>
+      <div class="error">Input must be between 2 and 100</div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  
+</body>
+</html>
